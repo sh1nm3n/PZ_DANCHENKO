@@ -14,22 +14,22 @@ while True:
     try:
         num1 = int(A)
         if num1 == 0:
-            print("ne")
+            print("Число не должно быть равным нулю. Повторите попытку: ")
             continue
         break
     except ValueError:
-        print("Ошибка: Пожалуйста, введите целое число.")
+        print("Ошибка! Пожалуйста, введите целое число: ")
 
 while True:
     B = input("Введите число B: ")
     try:
         num2 = int(B)
-        if num1 == 0:
-            print("ne")
+        if num2 == 0:
+            print("Число не должно быть равным нулю. Повторите попытку: ")
             continue
         break
     except ValueError:
-        print("Ошибка: Пожалуйста, введите целое числа.")
+        print("Ошибка! Пожалуйста, введите целое число: ")
 
 if is_odd(num1) or is_odd(num2):
     print("Истинно: хотя бы одно из чисел A и B нечетное.")
