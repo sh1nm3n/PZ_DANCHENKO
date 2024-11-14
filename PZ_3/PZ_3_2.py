@@ -43,7 +43,10 @@ elif operation == 3:
     result = mltp(A,B)
     print("Результат умножения: ", result)
 elif operation == 4:
-    result = div(A,B)
-    print("Результат деления: ", result)
+    if B == 0:
+        print("Ошибка: деление на ноль!")
+    else:
+        result = A / B
+        print("Результат деления:", result)
 
 
