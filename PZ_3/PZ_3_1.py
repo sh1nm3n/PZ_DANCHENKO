@@ -10,7 +10,7 @@ while type(A) != int:  #проверка на целое число
             A = int(A)
       except:
             print("Ошибка!")
-            A = input ("Повторите попытку. ")
+            A = input ("Повторите попытку: ")
 
 B = input("Введите второе целое число: ")
 while type(B) != int:
@@ -18,7 +18,7 @@ while type(B) != int:
         B = int(B)
     except:
         print("Ошибка!")
-        B = input("Повторите попытку. ")
+        B = input("Повторите попытку: ")
 
 if A % 2 != 0 or B % 2 != 0:
     print("True")
