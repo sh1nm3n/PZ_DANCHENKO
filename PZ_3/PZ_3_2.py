@@ -46,7 +46,7 @@ elif operation == 4:
     if B == 0:
         print("Ошибка: деление на ноль!")
     else:
-        result = A / B
+        result = div(A,B)
         print("Результат деления:", result)
 
 
