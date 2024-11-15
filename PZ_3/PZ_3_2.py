@@ -30,8 +30,21 @@ while True: #Проверка действия на целое число от 1
         print("Ошибка! Повторите попытку.")
 
 
-A = float(input("Введите первое вещественное число A: "))
-B = float(input("Введите второе вещественное число B: "))
+A = input("Введите первое вещественное число A: ")
+while type(A) != float:  #проверка на вещественное число
+      try:
+            A = float(A)
+      except:
+            print("Ошибка!")
+            A = input ("Повторите попытку: ")
+
+B = input("Введите второе вещественное число B: ")
+while type(B) != float:  #проверка на вещественное число
+      try:
+            B = float(B)
+      except:
+            print("Ошибка!")
+            B = input ("Повторите попытку: ")
 
 if operation == 1:
     result = sum(A,B)
@@ -48,5 +61,3 @@ elif operation == 4:
     else:
         result = div(A,B)
         print("Результат деления:", result)
-
-
