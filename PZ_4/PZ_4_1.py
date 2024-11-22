@@ -4,8 +4,8 @@
 '''
 
 def sum(a):
-    while a <= 0:
-        return "N должно быть больше 0"
+    while a <= 1:
+        return "N должно быть больше 1"
 
     total_sum = 0
     for i in range(1, N + 1 ):
