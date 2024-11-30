@@ -5,22 +5,30 @@
 '''
 import random
 
+
 def gen_rand_num():
-    return random.randint(1000, 9999)
+    number = random.randint(1000, 9999)
+    return number
 
 
-def same_digits(number):
-    digits = str(number)
-    return len(set(digits)) < len(digits) #Сравниваем длину множества уникальных цифр с длиной строки
+def has_duplicate_digits(number):
+    num_str = str(number)
+    for i in range(len(num_str)):  #проходим по каждой цифре
+        for j in range(i + 1, len(num_str)):  #сравниваем с остальными цифрами
+            if num_str[i] == num_str[j]: #если нашли одинаковые цифры
+                return True
+    return False
 
 
-number = gen_rand_num()
-print(f"Сгенерированное четырехзначное число: {number}")
+gen_num = gen_rand_num()
+print(f"Сгенерированное четырехзначное число: {gen_num}")
 
-if same_digits(number):
+
+if has_duplicate_digits(gen_num):
     print("В числе есть одинаковые цифры.")
 else:
     print("В числе нет одинаковых цифр.")
+
 
 
 
