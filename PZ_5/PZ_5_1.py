@@ -10,15 +10,15 @@ def gen_rand_num():
     number = random.randint(1000, 9999)
     return number
 
-
 def has_duplicate_digits(number):
-    num_str = str(number)
-    for i in range(len(num_str)):  #проходим по каждой цифре
-        for j in range(i + 1, len(num_str)):  #сравниваем с остальными цифрами
-            if num_str[i] == num_str[j]: #если нашли одинаковые цифры
-                return True
-    return False
-
+    a = number // 1000 #первая цифра числа
+    b = (number // 100) % 10 #вторая цифра числа
+    c = (number // 10) % 10 #третья цифра числа
+    d = number % 10 #четвертая цифра числа
+    if a == b or a == c or a == d or b == c or b == d or c == d:
+        return True
+    else:
+        return False
 
 gen_num = gen_rand_num()
 print(f"Сгенерированное четырехзначное число: {gen_num}")
