@@ -4,15 +4,18 @@
 списке четные числа в порядке возрастания их индексов, а затем — все нечетные
 числа в порядке убывания их индексов.
 '''
-import random
+numbers = [10, 17, 20, 25, 30, 33, 40, 45, 50, 55]
 
-random_numbers = [random.randint(1, 10) for _ in range(10)]
-print("Сгенерированный список:", random_numbers)
+chetnie_numbers = []
+nechetnie_numbers = []
 
+#разделение чисел на четные и нечетные
+for number in numbers:
+    if number % 2 == 0:
+        chetnie_numbers.append(number)
+    else:
+        nechetnie_numbers.append(number)
 
-chetnie_num = [num for num in random_numbers if num % 2 == 0]
-nechetnie_num = [num for num in random_numbers if num % 2 != 0]
+print("Четные числа: ", chetnie_numbers)
 
-
-print("Четные числа в порядке возрастания индексов:", chetnie_num)
-print("Нечетные числа в порядке убывания индексов:", nechetnie_num[::-1])
+print("Нечетные числа: ", nechetnie_numbers[::-1])
