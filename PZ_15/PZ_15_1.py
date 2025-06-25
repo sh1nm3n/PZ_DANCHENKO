@@ -1,6 +1,7 @@
 import sqlite3
 from sqlite3 import Error
 
+#Вариант 9
 
 def create_connection(db_file):
     """Создать соединение с базой данных SQLite"""

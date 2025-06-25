@@ -1,12 +1,10 @@
 #Вариант 9
 
 def find_common_elements(seq1, seq2):
-    """Находит общие элементы и их количество"""
     common = set(filter(lambda x: x in seq2, seq1))
     return common, len(common)
 
 
-# Пример использования
 if __name__ == "__main__":
     list1 = [1, 2, 3, 4, 5, 6]
     list2 = [4, 5, 6, 7, 8, 9]
