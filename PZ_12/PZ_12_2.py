@@ -1,3 +1,5 @@
+#Вариант 9
+
 import string
 
 def get_lowercase_chars(text):

@@ -1,3 +1,5 @@
+#Вариант 9
+
 def find_common_elements(seq1, seq2):
     """Находит общие элементы и их количество"""
     common = set(filter(lambda x: x in seq2, seq1))
